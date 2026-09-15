@@ -1,0 +1,2 @@
+# Colizeum-pc-manager
+Автоматизация
