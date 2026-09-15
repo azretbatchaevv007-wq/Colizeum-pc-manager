@@ -1,0 +1,15 @@
+[09:47:58] COLIZEUM PC Manager v1.4
+[09:47:58] Компьютер: PC09
+[09:47:58] Операция: AutomationTest
+[09:47:58] Epic Games | ЗАПУЩЕНО: D:/Games/Epic Games/Launcher/Portal/Binaries/Win64/EpicGamesLauncher.exe
+[09:48:08] Epic Games | ОЖИДАНИЕ: 10 сек.
+[09:48:08] Epic Games | КЛИК: x=969 y=365
+[09:48:09] Epic Games | ВВЕДЁН ЛОГИН
+[09:48:09] Epic Games | КЛАВИША: ENTER
+[09:48:09] Epic Games | КЛИК: x=848 y=547
+[09:48:09] Epic Games | ВВЕДЁН ПАРОЛЬ
+[09:48:09] Epic Games | КЛАВИША: ENTER
+[09:48:19] Epic Games | ОЖИДАНИЕ: 10 сек.
+[09:48:19] Epic Games | КЛИК: x=237 y=872
+[09:48:20] ТЕСТ ЗАВЕРШЁН: ошибок=0
+[09:48:20] Время работы: 21.5 сек.

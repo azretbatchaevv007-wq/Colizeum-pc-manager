@@ -1,0 +1,285 @@
+{
+  "drive": "D:\\",
+  "log_days": 30,
+  "root_keep_dirs": [
+    "$RECYCLE.BIN",
+    "Батники",
+    "Games",
+    "Programs",
+    "Recovery",
+    "RentalGames",
+    "System Volume Information",
+    "UpdateCheck3",
+    "Игры без аккаунта"
+  ],
+  "root_keep_files": [
+    "desktop.ini"
+  ],
+  "games_keep_dirs": [
+    "Battle.net",
+    "BsgLauncher",
+    "CS 1.6 Small Crosshair",
+    "EA Games",
+    "Electronic Arts",
+    "Epic Games",
+    "Game Centre",
+    "iccupLauncher",
+    "iccup_war3_ru",
+    "Innova",
+    "Lesta",
+    "packages",
+    "Portable",
+    "RAGEMP",
+    "Riot Games",
+    "Rockstar Games",
+    "Steam",
+    "Tanki",
+    "Ubisoft Game Launcher"
+  ],
+  "games_keep_files": [
+    "is550iy5yp.dat"
+  ],
+  "steam_common_keep_dirs": [
+    "Apex Legends",
+    "Arc Raiders",
+    "Call of Duty HQ",
+    "Counter-Strike Global Offensive",
+    "Deadlock",
+    "dota 2 beta",
+    "Grand Theft Auto V",
+    "Left 4 Dead 2",
+    "OBS Studio",
+    "Phasmophobia",
+    "PUBG",
+    "Rust",
+    "Steam Controller Configs",
+    "Steamworks Shared"
+  ],
+  "cache_paths": [
+    {
+      "enabled": true,
+      "path": "D:\\Games\\Steam\\steam\\cached"
+    },
+    {
+      "enabled": true,
+      "path": "D:\\Games\\Steam\\userdata"
+    },
+    {
+      "enabled": true,
+      "path": "D:\\Games\\Steam\\steamapps\\shadercache"
+    },
+    {
+      "enabled": true,
+      "path": "D:\\Games\\Steam\\steamapps\\temp"
+    },
+    {
+      "enabled": true,
+      "path": "D:\\Games\\Steam\\steamapps\\workshop\\content"
+    },
+    {
+      "enabled": true,
+      "path": "D:\\Games\\Steam\\steamapps\\workshop\\temp"
+    },
+    {
+      "enabled": true,
+      "path": "D:\\Games\\Steam\\steamapps\\common\\Counter-Strike Global Offensive\\csgo\\maps\\workshop"
+    },
+    {
+      "enabled": true,
+      "path": "D:\\Games\\Steam\\steamapps\\downloading"
+    },
+    {
+      "enabled": true,
+      "path": "D:\\Games\\Steam\\package"
+    },
+    {
+      "enabled": true,
+      "path": "D:\\Games\\Steam\\config"
+    },
+    {
+      "enabled": true,
+      "path": "D:\\Games\\Steam\\logs"
+    },
+    {
+      "enabled": true,
+      "path": "D:\\Games\\Steam\\appcache"
+    },
+    {
+      "enabled": true,
+      "path": "D:\\Games\\Ubisoft Game Launcher\\logs"
+    }
+  ],
+  "cache_start_updater": true,
+  "cache_start_rentalgames": true,
+  "cache_reboot": false,
+  "launchers": [
+    {
+      "enabled": true,
+      "name": "general (ALT3).bat — ярлык",
+      "path": "D:/Игры без аккаунта/general (ALT3).bat — ярлык.lnk",
+      "wait": 60,
+      "automation_enabled": false,
+      "steps": []
+    },
+    {
+      "enabled": true,
+      "name": "Discord",
+      "path": "C:\\Users\\Colizeum\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Discord Inc\\Discord.lnk",
+      "wait": 60,
+      "automation_enabled": false,
+      "steps": []
+    },
+    {
+      "enabled": true,
+      "name": "RentalGames updater",
+      "path": "D:\\RentalGames\\updater.exe",
+      "wait": 120,
+      "automation_enabled": false,
+      "steps": []
+    },
+    {
+      "enabled": true,
+      "name": "Epic Games",
+      "path": "D:\\Games\\Epic Games\\Launcher\\Portal\\Binaries\\Win64\\EpicGamesLauncher.exe",
+      "wait": 120,
+      "automation_enabled": true,
+      "steps": [
+        {
+          "type": "launch",
+          "path": "D:/Games/Epic Games/Launcher/Portal/Binaries/Win64/EpicGamesLauncher.exe"
+        },
+        {
+          "type": "wait",
+          "seconds": 10
+        },
+        {
+          "type": "click",
+          "x": 969,
+          "y": 365
+        },
+        {
+          "type": "wait",
+          "seconds": 2
+        },
+        {
+          "type": "text",
+          "text": "Azretbatchaev007@mail.ru"
+        },
+        {
+          "type": "key",
+          "key": "ENTER"
+        },
+        {
+          "type": "wait",
+          "seconds": 10
+        },
+        {
+          "type": "click",
+          "x": 886,
+          "y": 508
+        },
+        {
+          "type": "wait",
+          "seconds": 2
+        },
+        {
+          "type": "text",
+          "text": "Azret2001"
+        },
+        {
+          "type": "key",
+          "key": "ENTER"
+        },
+        {
+          "type": "wait",
+          "seconds": 20
+        },
+        {
+          "type": "click",
+          "x": 237,
+          "y": 872
+        }
+      ]
+    },
+    {
+      "enabled": true,
+      "name": "Lesta Game Center",
+      "path": "D:\\Games\\Lesta\\GameCenter\\lgc.exe",
+      "wait": 60,
+      "automation_enabled": false,
+      "steps": []
+    },
+    {
+      "enabled": true,
+      "name": "GameCenter",
+      "path": "C:\\Users\\Colizeum\\AppData\\Local\\GameCenter\\GameCenter.exe",
+      "wait": 60,
+      "automation_enabled": false,
+      "steps": []
+    },
+    {
+      "enabled": true,
+      "name": "Riot Client",
+      "path": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Riot Games\\Riot Client.lnk",
+      "wait": 60,
+      "automation_enabled": false,
+      "steps": []
+    },
+    {
+      "enabled": true,
+      "name": "VALORANT",
+      "path": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Riot Games\\VALORANT.lnk",
+      "wait": 300,
+      "automation_enabled": false,
+      "steps": []
+    },
+    {
+      "enabled": true,
+      "name": "League of Legends",
+      "path": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Riot Games\\League of Legends.lnk",
+      "wait": 300,
+      "automation_enabled": false,
+      "steps": []
+    },
+    {
+      "enabled": true,
+      "name": "FACEIT",
+      "path": "C:\\Users\\Colizeum\\AppData\\Local\\FACEIT\\FACEIT.exe",
+      "wait": 60,
+      "automation_enabled": false,
+      "steps": []
+    },
+    {
+      "enabled": true,
+      "name": "FACEIT AC",
+      "path": "C:\\Program Files\\FACEIT AC\\faceitclient.exe",
+      "wait": 60,
+      "automation_enabled": false,
+      "steps": []
+    },
+    {
+      "enabled": true,
+      "name": "Rockstar Launcher",
+      "path": "D:\\Games\\Rockstar Games\\Launcher\\LauncherPatcher.exe",
+      "wait": 60,
+      "automation_enabled": false,
+      "steps": []
+    },
+    {
+      "enabled": true,
+      "name": "iCCup Launcher",
+      "path": "D:\\Games\\iccupLauncher\\Launcher.exe",
+      "wait": 60,
+      "automation_enabled": false,
+      "steps": []
+    },
+    {
+      "enabled": true,
+      "name": "Update Check 3",
+      "path": "D:\\UpdateCheck3\\Update_check3.exe",
+      "wait": 0,
+      "automation_enabled": false,
+      "steps": []
+    }
+  ]
+}
