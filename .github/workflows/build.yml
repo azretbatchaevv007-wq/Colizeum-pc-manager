@@ -2,36 +2,58 @@ name: Build COLIZEUM PC Manager EXE
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "COLIZEUM_PC_Manager_v1_4_INTEGRATED_AUTOMATION/**"
+      - ".github/workflows/build.yml"
 
 jobs:
   build:
+    name: Build Windows EXE
     runs-on: windows-latest
 
     steps:
-      - name: Download repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install Python
+      - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
       - name: Install PyInstaller
-        run: python -m pip install --upgrade pip pyinstaller
-
-      - name: Build EXE
-        working-directory: COLIZEUM_PC_Manager_v1_4_INTEGRATED_AUTOMATION
-        run: pyinstaller --noconfirm --clean --onefile --windowed --name "COLIZEUM PC Manager" main.py
-
-      - name: Prepare release
         shell: pwsh
         run: |
-          New-Item -ItemType Directory -Force release
+          python -m pip install --upgrade pip
+          python -m pip install pyinstaller
+
+      - name: Verify project files
+        shell: pwsh
+        run: |
+          Get-ChildItem -Force
+          Get-ChildItem -Force "COLIZEUM_PC_Manager_v1_4_INTEGRATED_AUTOMATION"
+          if (-not (Test-Path "COLIZEUM_PC_Manager_v1_4_INTEGRATED_AUTOMATION\main.py")) {
+            throw "main.py not found"
+          }
+
+      - name: Build EXE
+        shell: pwsh
+        working-directory: COLIZEUM_PC_Manager_v1_4_INTEGRATED_AUTOMATION
+        run: |
+          python -m PyInstaller --noconfirm --clean --onefile --windowed --name "COLIZEUM PC Manager" main.py
+
+      - name: Prepare artifact
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force "release"
           Copy-Item "COLIZEUM_PC_Manager_v1_4_INTEGRATED_AUTOMATION\dist\COLIZEUM PC Manager.exe" "release\COLIZEUM PC Manager.exe"
           Copy-Item "COLIZEUM_PC_Manager_v1_4_INTEGRATED_AUTOMATION\config.json" "release\config.json"
 
-      - name: Upload Windows build
+      - name: Upload Windows EXE
         uses: actions/upload-artifact@v4
         with:
           name: COLIZEUM-PC-Manager-Windows
-          path: release/*
+          path: release/
+          if-no-files-found: error
